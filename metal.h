@@ -6,7 +6,7 @@
 #define LUMARENDER_METAL_H
 #include "vec3.h"
 #include "ray.h"
-#include "hitable.h"
+#include "hittable.h"
 #include "material.h"
 
 vec3 reflect(const vec3& v, const vec3& n) {
