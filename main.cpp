@@ -5,7 +5,6 @@
 #include "sphere.h"
 #include "float.h"
 #include "camera.h"
-#include "metal.h"
 #include "color.h"
 #include "vec3.h"
 
