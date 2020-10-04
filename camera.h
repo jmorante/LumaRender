@@ -12,7 +12,7 @@ class camera {
         camera(
             point3 lookfrom,
             point3 lookat,
-            vec3 vup,
+            vec3   vup,
             double vfov, // vertical field-of-view in degrees
             double aspect_ratio
         ) {
@@ -22,8 +22,10 @@ class camera {
             auto viewport_width = aspect_ratio * viewport_height;
 
             auto w = unit_vector(lookfrom - lookat);
-            auto u = unit_vector(cross(vup,w));
+            auto u = unit_vector(cross(vup, w));
             auto v = cross(w, u);
+
+            auto focal_length = 1.0;
 
             origin = lookfrom;
             horizontal = viewport_width * u;
