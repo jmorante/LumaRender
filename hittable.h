@@ -5,6 +5,7 @@
 #ifndef LUMARENDER_HITTABLE_H
 #define LUMARENDER_HITTABLE_H
 #include "ray.h"
+#include "raytracer.h"
 
 class material;
 
@@ -12,7 +13,7 @@ struct hit_record {
     double t;
     point3 p;
     vec3 normal;
-    material *mat_ptr;
+    shared_ptr<material> mat_ptr;
     bool front_face;
 
     inline void set_face_normal(const ray& r, const vec3& outward_normal) {
