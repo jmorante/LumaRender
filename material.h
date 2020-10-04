@@ -5,12 +5,16 @@
 #ifndef LUMARENDER_MATERIAL_H
 #define LUMARENDER_MATERIAL_H
 #include "ray.h"
-#include "hitable.h"
+#include "hittable.h"
+#include "raytracer.h"
+
+struct hit_record;
 
 class material {
     public:
-        virtual bool scatter(const ray& ray_in, const hit_record& rec, vec3& attenuation, ray& scattered) const = 0;
+        virtual bool scatter(
+            const ray& ray_in, const hit_record& rec, vec3& attenuation, ray& scattered
+        ) const = 0;
 };
-
 
 #endif //LUMARENDER_MATERIAL_H
